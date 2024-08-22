@@ -10,6 +10,7 @@ html {
   overflow-x: hidden;
 }
 
+/*  */
 body {
   background: rgb(0, 0, 0);
   min-height: 100vh;
@@ -65,15 +66,6 @@ article {
   gap: 15rem;
 }
 
-footer {
-  padding: 20px;
-  font-size: 13px;
-  color: white;
-  background-color: rgb(49, 49, 48);
-  text-align: center;
-  font-weight: bold;
-}
-
 .background img {
   position: fixed;
   width: 100%;
@@ -87,8 +79,8 @@ footer {
 
 .home-content {
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
   text-align: left;
   justify-content: center;
   margin-top: 3rem;
@@ -230,6 +222,13 @@ span {
   flex-wrap: wrap;
 }
 
+.slider .stream {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  transform: translateX(-50);
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -240,6 +239,10 @@ span {
   box-shadow: 1px 1px 20px 1px rgba(49, 48, 48, 0.7);
   border-radius: 2%;
   margin: 1em;
+  overflow: hidden;
+  width: 45rem;
+  height: 45rem;
+  position: relative;
 }
 
 .list img {
@@ -247,6 +250,7 @@ span {
   height: 270px;
   margin: 1em;
   border-radius: 4%;
+  position: absolute;
 }
 
 .list h2 {
@@ -262,6 +266,54 @@ span {
   font-weight: 300;
   text-align: center;
   margin: 0.5em;
+}
+
+.list-info {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: -17%;
+}
+
+.list-info:hover {
+  bottom: 3%;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.riquest {
+  width: 50%;
+  height: 5%;
+  border: 1px solid black;
+  border-style: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.riquest-card {
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.riquest-detail {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  border-style: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 20px auto;
+}
+
+footer {
+  padding: 20px;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(49, 49, 48);
+  text-align: center;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
