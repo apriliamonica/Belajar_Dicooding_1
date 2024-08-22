@@ -9,17 +9,33 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!--navbar-->
-    <header class="header">
-      <h2 class="logo">Lis<span>Ten</span></h2>
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#stream">Stream</a>
-        <a href="#riquest">Riquest</a>
-      </nav>
+    <header>
+      <div class="navbar">
+        <div class="nav-title">
+          <a href="#home">Lis<span>Ten</span></a>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#stream" class="nav-link">Stream</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-toggle" id="nav-togle">
+          <span class="menu-toggle"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
     </header>
     <!--navbar-->
     <!--main content section-->>
@@ -27,7 +43,7 @@
       <div class="background">
         <img src="assets/image/bintang.jpg" alt="bintang" />
       </div>
-      <div id="content">
+      <div class="content">
         <!--home section-->
         <article class="home" id="home">
           <div class="home-content">
@@ -49,52 +65,54 @@
               </div>
             </div>
             <aside>
-              <div></div>
+              <div>
                 <img src="assets/image/szap.png" alt="" />
               </div>
             </aside>
           </div>
         </article>
         <article class="about" id="about">
-          <h2>About Lis<span>Ten</span></h2>
-          <p>
-            Lis<span>Ten</span> will show recommendations of many great
-            playlists and you will find many songs in the playlis. You will also
-            be directed directly to spotify and immediately get a beautiful
-            playlist.
-          </p>
-          <div class="about-content">
-            <div class="card">
-              <img src="assets/image/ariana.jpg" alt="ariana" />
-              <h5>Arian Grande</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/zack.jpg" alt="zack" />
-              <h5>Zack Tabudlo</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/szap.png" alt="sza" />
-              <h5>SZA</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/henry.jpg" alt="henry" />
-              <h5>Henry Moodie</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/mila.png" alt="camila" />
-              <h5>Camila</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/dependent.png" alt="Keenan" />
-              <h5>Keenan</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/taylor.jpg" alt="taylor" />
-              <h5>Taylor Swift</h5>
-            </div>
-            <div class="card">
-              <img src="assets/image/backburner.png" alt="backburner" />
-              <h5>NIKI</h5>
+          <div class="about-container">
+            <h2>About Lis<span>Ten</span></h2>
+            <p>
+              Lis<span>Ten</span> will show recommendations of many great
+              playlists and you will find many songs in the playlis. You will
+              also be directed directly to spotify and immediately get a
+              beautiful playlist.
+            </p>
+            <div class="about-content">
+              <div class="card">
+                <img src="assets/image/ariana.jpg" alt="ariana" />
+                <h5>Arian Grande</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/zack.jpg" alt="zack" />
+                <h5>Zack Tabudlo</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/szap.png" alt="sza" />
+                <h5>SZA</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/henry.jpg" alt="henry" />
+                <h5>Henry Moodie</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/mila.png" alt="camila" />
+                <h5>Camila</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/dependent.png" alt="Keenan" />
+                <h5>Keenan</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/taylor.jpg" alt="taylor" />
+                <h5>Taylor Swift</h5>
+              </div>
+              <div class="card">
+                <img src="assets/image/backburner.png" alt="backburner" />
+                <h5>NIKI</h5>
+              </div>
             </div>
           </div>
         </article>
@@ -102,70 +120,61 @@
         <!--stream section-->
         <article class="stream" id="stream">
           <h2>Trending Lis<span>Ten</span></h2>
-          <div class="slider">
-            <div class="container-list">
-              <div class="list">
-                <img src="assets/image/backburner.png" alt="backburner" />
-                <div class="list-info">
-                  <h2>Backburner</h2>
-                  <p>NIKI</p>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Obcaecati provident officia voluptatum quae, iste, ad ipsum
-                    aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
-                    dicta earum saepe deleniti dolorum natus.
-                  </p>
-                </div>
+          <div class="container-list">
+            <div class="list">
+              <img src="assets/image/backburner.png" alt="backburner" />
+              <div class="list-info">
+                <h2>Backburner</h2>
+                <p>NIKI</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Obcaecati provident officia voluptatum quae, iste, ad ipsum
+                  aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
+                  dicta earum saepe deleniti dolorum natus.
+                </p>
               </div>
-              <div class="list">
-                <img src="assets/image/saturn.png" alt="saturn" />
-                <div class="list-info">
-                  <h2>Backburner</h2>
-                  <p>NIKI</p>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Obcaecati provident officia voluptatum quae, iste, ad ipsum
-                    aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
-                    dicta earum saepe deleniti dolorum natus.
-                  </p>
-                </div>
+            </div>
+            <div class="list">
+              <img src="assets/image/saturn.png" alt="saturn" />
+              <div class="list-info">
+                <h2>Backburner</h2>
+                <p>NIKI</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Obcaecati provident officia voluptatum quae, iste, ad ipsum
+                  aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
+                  dicta earum saepe deleniti dolorum natus.
+                </p>
               </div>
-              <div class="list">
-                <img
-                  src="assets/image/turn-back-time.png"
-                  alt="turn-back-time"
-                />
-                <div class="list-info">
-                  <h2>Backburner</h2>
-                  <p>NIKI</p>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Obcaecati provident officia voluptatum quae, iste, ad ipsum
-                    aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
-                    dicta earum saepe deleniti dolorum natus.
-                  </p>
-                </div>
+            </div>
+            <div class="list">
+              <img src="assets/image/turn-back-time.png" alt="turn-back-time" />
+              <div class="list-info">
+                <h2>Backburner</h2>
+                <p>NIKI</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Obcaecati provident officia voluptatum quae, iste, ad ipsum
+                  aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
+                  dicta earum saepe deleniti dolorum natus.
+                </p>
               </div>
-              <div class="list">
-                <img
-                  src="assets/image/about-you-song.png"
-                  alt="about-you-song"
-                />
-                <div class="list-info">
-                  <h2>Backburner</h2>
-                  <p>NIKI</p>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Obcaecati provident officia voluptatum quae, iste, ad ipsum
-                    aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
-                    dicta earum saepe deleniti dolorum natus.
-                  </p>
-                </div>
+            </div>
+            <div class="list">
+              <img src="assets/image/about-you-song.png" alt="about-you-song" />
+              <div class="list-info">
+                <h2>Backburner</h2>
+                <p>NIKI</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Obcaecati provident officia voluptatum quae, iste, ad ipsum
+                  aliquid nesciunt sunt suscipit, perspiciatis omnis? Amet, at
+                  dicta earum saepe deleniti dolorum natus.
+                </p>
               </div>
             </div>
           </div>
         </article>
-        <!-- Section stream -->
         <article class="stream" id="stream">
           <h2>K-POP Lis<span>Ten</span></h2>
           <div class="container-list">
@@ -280,6 +289,8 @@
             </div>
           </div>
         </article>
+
+        <article class=""></article>
       </div>
     </main>
     <!-- section footer -->
