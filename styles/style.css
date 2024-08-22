@@ -207,7 +207,7 @@ span {
 }
 
 .stream h2 {
-  font-size: medium;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -234,21 +234,21 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(77, 75, 75, 0.7);
-  color: rgba(255, 255, 255, 0.7);
-  box-shadow: 1px 1px 20px 1px rgba(49, 48, 48, 0.7);
+  background-color: rgba(167, 161, 161, 0.7);
+  color: rgba(228, 228, 228, 0.7);
+  box-shadow: 1px 1px 20px 1px rgba(92, 91, 91, 0.7);
   border-radius: 2%;
-  margin: 1em;
+  margin: 2em;
   overflow: hidden;
-  width: 45rem;
-  height: 45rem;
+  width: 25rem;
+  height: 35rem;
   position: relative;
 }
 
 .list img {
-  width: 240px;
-  height: 270px;
-  margin: 1em;
+  width: 260px;
+  height: 280px;
+  margin-top: -79px;
   border-radius: 4%;
   position: absolute;
 }
@@ -271,7 +271,7 @@ span {
 .list-info {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.1);
-  bottom: -17%;
+  bottom: -42%;
 }
 
 .list-info:hover {
