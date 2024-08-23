@@ -80,6 +80,14 @@ header {
 
 /* navbar */
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding-block: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
 /* home */
 
 .content {
@@ -88,6 +96,7 @@ header {
   justify-content: center;
   flex-direction: column;
   gap: 10rem;
+  width: 100%;
 }
 
 .home {
@@ -371,6 +380,7 @@ span {
 /* about */
 
 /* stream */
+
 .stream {
   width: 100%;
   display: flex;
@@ -476,6 +486,30 @@ span {
 }
 
 /* stream */
+
+/* aside */
+.aprilia {
+  max-width: 1200px;
+  margin-inline: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+.aprilia img {
+  max-width: 200px;
+  aspect-ratio: 3/4;
+}
+
+.aprilia h3,
+.aprilia p {
+  color: aliceblue;
+  text-align: center;
+}
 
 /* footer */
 footer {
