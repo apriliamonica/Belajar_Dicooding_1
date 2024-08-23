@@ -9,12 +9,13 @@ html {
   font-family: sans-serif;
 }
 
-/*  */
 body {
   background: rgb(0, 0, 0);
   min-height: 100vh;
   overflow: hidden;
 }
+
+/* navbar */
 
 header {
   position: fixed;
@@ -46,6 +47,7 @@ header {
   font-size: 35px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 3, 1);
+  font-weight: bold;
 }
 
 .nav-daftar {
@@ -70,18 +72,15 @@ header {
   cursor: pointer;
 }
 
-.logo {
-  font-size: 3.5em;
-  color: rgb(255, 255, 255);
-  pointer-events: none;
-  justify-content: center;
-}
-
 .nav-item:hover,
 .nav-item:active {
   background: white;
   color: rgb(0, 0, 0);
 }
+
+/* navbar */
+
+/* home */
 
 .content {
   display: flex;
@@ -116,38 +115,82 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
   gap: 3rem;
   max-width: 1200px;
   margin-inline: 8%;
+  position: relative;
+  padding-block: 10rem;
 }
 
 .home-teks {
   width: 100%;
+  flex: 100%;
 }
 
 .home-gambar {
   display: flex;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
-.gambar-besar img {
+.gambar-besar {
   position: absolute;
-  max-width: 40rem;
-  top: 0;
-  right: 0;
+  width: 60%;
+  height: 70%;
+  top: 8%;
+  left: 20%;
+  z-index: 3;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
 }
-.gambar-sedang img {
-  position: absolute;
-  max-width: 30rem;
-  bottom: 0;
-  left: 0;
+
+.gambar-sedang {
+  z-index: 2;
+  opacity: 0.5;
+  transition: transform 0.5s ease;
+  width: 32%;
+  height: auto;
+  overflow: hidden;
 }
+.gambar-kecil {
+  z-index: 1;
+  opacity: 0.5;
+  transition: transform 0.5s ease;
+  align-self: flex-start;
+  width: 38%;
+  height: auto;
+}
+
+.gambar-tengah {
+  width: 30%;
+  height: 100%;
+  opacity: 0;
+  z-index: -100;
+}
+
+.gambar-tengah img {
+  height: 450px;
+}
+
+.gambar-sedang img,
 .gambar-kecil img {
-  position: absolute;
-  max-width: 20rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.gambar-besar:hover,
+.gambar-sedang:hover,
+.gambar-kecil:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 99;
+  transition: transform 0.5s ease;
 }
 
 span {
@@ -193,6 +236,8 @@ span {
   color: black;
 }
 
+/* home */
+
 /* about */
 
 .about {
@@ -230,7 +275,7 @@ span {
 .about h2 {
   margin: 50px 0 20px;
   font-size: 45px;
-  font-weight: 500;
+  font-weight: bold;
   color: white;
   font-family: sans-serif;
 }
@@ -300,6 +345,10 @@ span {
   flex-direction: column;
 }
 
+.about .about-content .card img {
+  width: 100%;
+}
+
 .card img {
   width: 200px;
   height: auto;
@@ -319,10 +368,9 @@ span {
   color: white;
 }
 
-.about .about-content .card img {
-  width: 100%;
-}
+/* about */
 
+/* stream */
 .stream {
   width: 100%;
   display: flex;
@@ -341,7 +389,7 @@ span {
   font-family: sans-serif;
 }
 
-.stream {
+.stream p {
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
@@ -427,6 +475,9 @@ span {
   transition: top 1s ease-in-out, background-color 0.5s ease-in-out;
 }
 
+/* stream */
+
+/* footer */
 footer {
   padding: 20px;
   font-size: 13px;
@@ -435,6 +486,9 @@ footer {
   text-align: center;
   font-weight: bold;
 }
+/* footer */
+
+/* responsive */
 
 @media screen and (max-width: 1200px) {
   .navbar {
@@ -447,6 +501,14 @@ footer {
     display: flex;
     gap: 3rem;
     list-style: none;
+  }
+  .gambar-besar {
+    top: 15%;
+    left: 14%;
+  }
+  .gambar-besar img {
+    width: 330px;
+    height: 330px;
   }
 }
 
@@ -483,7 +545,57 @@ footer {
     flex-direction: column;
   }
 
-  .home-content aside img {
-    max-width: 20rem;
+  .gambar-besar {
+    top: 10%;
+    left: 20%;
+  }
+  .gambar-besar img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .gambar-sedang {
+    align-self: center;
+    width: 100%;
+  }
+  .gambar-kecil {
+    align-self: center;
+    width: 100%;
+  }
+  .gambar-sedang img {
+    width: 250px;
+    height: 200px;
+  }
+  .gambar-kecil img {
+    width: 200px;
+    height: 200px;
+  }
+  .gambar-tengah img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-gambar {
+    flex-direction: column;
+  }
+
+  .gambar-besar {
+    top: 10%;
+    left: -50%;
+  }
+  .gambar-besar img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .gambar-tengah img {
+    height: 100px;
+  }
+  .gambar-sedang img {
+    width: 150px;
+  }
+  .gambar-kecil img {
+    width: 150px;
   }
 }
