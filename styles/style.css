@@ -6,6 +6,7 @@
 html {
   font-size: 55%;
   overflow-x: hidden;
+  font-family: sans-serif;
 }
 
 /*  */
@@ -164,6 +165,8 @@ span {
   color: black;
 }
 
+/* about */
+
 .about {
   position: relative;
   width: 100%;
@@ -172,6 +175,19 @@ span {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+}
+
+.about-bg {
+  background-color: rgba(22, 21, 21, 0.7);
+  color: rgba(228, 228, 228, 0.7);
+  box-shadow: 1px 1px 20px 1px rgba(92, 91, 91, 0.7);
+  border-radius: 10px;
+  max-width: 1200px;
+  margin-inline: 8%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .about-container {
@@ -184,9 +200,11 @@ span {
 }
 
 .about h2 {
-  font-size: medium;
-  font-weight: bold;
+  margin: 50px 0 20px;
+  font-size: 45px;
+  font-weight: 500;
   color: white;
+  font-family: sans-serif;
 }
 
 .about p {
@@ -194,12 +212,50 @@ span {
   font-weight: 500;
   color: white;
   line-height: 1.8;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .about .about-content {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.playlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 10rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  text-decoration: none;
+}
+
+.playlist img {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 1px rgba(7, 7, 7, 0.7);
+  object-position: center;
+  margin: 3px 0 15px;
+  object-fit: cover;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.playlist a {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.playlist h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-family: sans-serif;
 }
 
 .about .about-content .card {
@@ -219,13 +275,20 @@ span {
 .card img {
   width: 200px;
   height: auto;
-  margin: 3em;
   text-align: center;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
   justify-content: center;
   display: flex;
+  object-position: center;
+  margin: 3px 0 15px;
+  object-fit: cover;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  color: white;
 }
 
 .about .about-content .card img {
@@ -247,6 +310,7 @@ span {
   font-weight: bold;
   text-align: center;
   color: white;
+  font-family: sans-serif;
 }
 
 .container-list {
@@ -342,7 +406,10 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-  .home-content {
+  .nav-list {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
   }
 }
 
